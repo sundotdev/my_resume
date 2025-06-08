@@ -196,7 +196,7 @@
       <div id="workExpList" class="space-y-3 text-gray-300"></div>
 
       <h2 id="titleAward" class="text-xl font-semibold mt-6 mb-2"></h2>
-      <div id="awardList" class="space-y-4 text-gray-300"></div>
+      <div id="awardList" class="list-disc list-inside text-gray-300"></div>
 
       <h2 id="titleContact" class="text-xl font-semibold mt-6 mb-2"></h2>
       <ul id="contactList" class="list-disc list-inside text-gray-300"></ul>
@@ -448,14 +448,14 @@
 
       data.award.forEach(([value, imgSrc]) => {
         const item = document.createElement('div');
-        item.className = 'flex items-start gap-2';
+        item.className = 'flex flex-col gap-2';
 
         item.innerHTML = `
       ${imgSrc ? `
       <div>
         <p>${value}</p>
       </div>
-      <img src="${imgSrc}" style="width: 200px; height: 200px;" class="object-cover rounded-lg shadow-md">` : ''}
+      <img src="${imgSrc}" style="width: 300px; height: 300px;" class="object-cover rounded-lg shadow-md">` : ''}
     `;
 
         awardList.appendChild(item);
